@@ -25,6 +25,15 @@ The Model Context Protocol (MCP) is a modern standard that transforms AI agents 
 
 As agents move into production, MCP solves common integration challenges — interoperability, reliability, and security — by providing a consistent, decoupled, and scalable interface between agents and tools. Just as containers redefined software deployment, MCP is reshaping how AI systems interact with the world.
 
+> **Example**
+> 
+> In simple terms, an MCP server is a way for an LLM to interact with an external system.
+> 
+> For example:
+> If you ask a model to create a meeting, it needs to communicate with your calendar app to do that.
+> An MCP server for your calendar app provides _tools_ that perform atomic actions, such as:
+> "getting the details of a meeting" or "creating a new meeting".
+
 ## What is Docker MCP Catalog and Toolkit?
 
 Docker MCP Catalog and Toolkit is a comprehensive solution for securely building, sharing, and running MCP tools. It simplifies the developer experience across four key areas:
@@ -38,6 +47,6 @@ With Docker Hub and the Docker Desktop extension, you can:
 
 - Launch MCP servers in seconds
 - Add tools via CLI or GUI
-- Rely on Docker’s pull-based infrastructure for trusted delivery
+- Rely on Docker's pull-based infrastructure for trusted delivery
 
 {{< grid >}}
