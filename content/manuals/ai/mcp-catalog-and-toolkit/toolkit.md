@@ -21,6 +21,37 @@ The Docker MCP Toolkit enables seamless setup, management, and execution of cont
 
 ![Visualisation of the MCP toolkit](/assets/images/mcp_servers.png)
 
+## Security
+
+The Docker MCP Toolkit combines passive and active measures to reduce attack
+surfaces and ensure safe runtime behavior.
+
+### Passive security
+
+- Image signing and attestation: All MCP server images are built by Docker and digitally
+  signed to verify their source and integrity. Each image includes a Software
+  Bill of Materials (SBOM) for full transparency.
+
+### Active security
+
+Security at runtime is enforced through resource and access limitations:
+
+- CPU allocation: MCP tools are run in their own container. They are
+  restricted to 1 CPU, limiting the impact of potential misuse of computing
+  resources.
+
+- Memory allocation: Containers for MCP tools are limited to 2 Gb.
+
+- Filesystem access: By default, MCP Servers have no access to the host filesystem.
+  Only select servers are explicitly granted file mounts.
+
+- Outbound network access: Network is access is disabled when a server has access to the 
+  filesystem, and vice-versa. Most servers require access to only a single host, port,
+  and protocol. These permissions are explicitly listed and enforced.
+
+- Interception of tool requests: Requests to and from tools that contain sensitive
+  information such as secrets are blocked.
+
 ## Install an MCP server
 
 To install an MCP server:
