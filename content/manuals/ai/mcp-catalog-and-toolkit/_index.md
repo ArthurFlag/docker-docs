@@ -8,7 +8,7 @@ params:
       color: green
       text: New
 weight: 30
-description: Learn about Docker's MCP catalog on Docker Hub and how to use it with the MCP Toolkit extension
+description: Learn about Docker's MCP catalog on Docker Hub
 keywords: Docker, ai, mcp servers, ai agents, extension, docker desktop, llm, docker hub
 grid:
  - title: MCP Catalog
@@ -16,7 +16,7 @@ grid:
    icon: hub
    link: /ai/mcp-catalog-and-toolkit/catalog/
  - title: MCP Toolkit
-   description: Learn about how to use the MCP Toolkit extension on Docker Desktop
+   description: Learn about the MCP toolkit to manage MCP servers and clients
    icon: manufacturing
    link: /ai/mcp-catalog-and-toolkit/toolkit/
 ---
