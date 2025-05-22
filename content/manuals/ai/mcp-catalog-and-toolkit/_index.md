@@ -5,8 +5,8 @@ params:
   sidebar:
     group: AI
     badge:
-      color: green
-      text: New
+      color: blue
+      text: Beta
 weight: 30
 description: Learn about Docker's MCP catalog on Docker Hub
 keywords: Docker, ai, mcp servers, ai agents, extension, docker desktop, llm, docker hub
