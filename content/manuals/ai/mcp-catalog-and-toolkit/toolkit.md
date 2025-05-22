@@ -30,6 +30,10 @@ To install an MCP server:
 3. Optional: Some servers require extra configuration. To configure them, select
    the **Config** tab and follow the instructions available on the repository of the provider of the MCP server.
 
+> [!TIP]
+> By default, the Gordon [client](#install-an-mcp-client) is enabled,
+> which means Gordon can automatically interact with your MCP servers.
+
 To learn more about the MCP server catalog, see [Catalog](catalog.md).
 
 ### Example: Use the GitHub MCP server
