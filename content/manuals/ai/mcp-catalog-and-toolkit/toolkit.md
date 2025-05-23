@@ -2,6 +2,9 @@
 title: MCP Toolkit
 description: Use the MCP Tookit to set up MCP servers and MCP clients.
 keywords: Docker MCP Toolkit, MCP server, MCP client, AI agents
+aliases:
+  - /desktop/features/gordon/mcp/gordon-mcp-server/
+  - /ai/gordon/mcp/gordon-mcp-server/
 ---
 
 The Docker MCP Toolkit enables seamless setup, management, and execution of containerized MCP servers and their connections to AI agents. It removes the friction from tool usage by offering secure defaults, one-click setup, and support for a growing ecosystem of LLM-based clients. It is the fastest path from MCP tool discovery to local execution.
