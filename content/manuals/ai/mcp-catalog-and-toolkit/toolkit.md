@@ -1,6 +1,6 @@
 ---
 title: MCP Toolkit
-description: Use the MCP Tookit to set up MCP servers and MCP clients.
+description: Use the MCP Toolkit to set up MCP servers and MCP clients.
 keywords: Docker MCP Toolkit, MCP server, MCP client, AI agents
 aliases:
   - /desktop/features/gordon/mcp/gordon-mcp-server/
@@ -28,7 +28,8 @@ surfaces and ensure safe runtime behavior.
 
 ### Passive security
 
-- Image signing and attestation: All MCP server images are built by Docker and digitally
+- Image signing and attestation: All MCP server images under `mcp/` in the [catalog](catalog.md) 
+  are built by Docker and digitally
   signed to verify their source and integrity. Each image includes a Software
   Bill of Materials (SBOM) for full transparency.
 
@@ -43,11 +44,12 @@ Security at runtime is enforced through resource and access limitations:
 - Memory allocation: Containers for MCP tools are limited to 2 Gb.
 
 - Filesystem access: By default, MCP Servers have no access to the host filesystem.
-  Only select servers are explicitly granted file mounts.
+  The user explicitly selects the servers that will be granted file mounts.
 
-- Outbound network access: Network is access is disabled when a server has access to the 
+- Outbound network access: Typically, network access is disabled when a server has access to the 
   filesystem, and vice-versa. Most servers require access to only a single host, port,
   and protocol. These permissions are explicitly listed and enforced.
+  There are some exceptions, such as the `mcp/git` server.
 
 - Interception of tool requests: Requests to and from tools that contain sensitive
   information such as secrets are blocked.
