@@ -46,11 +46,6 @@ Security at runtime is enforced through resource and access limitations:
 - Filesystem access: By default, MCP Servers have no access to the host filesystem.
   The user explicitly selects the servers that will be granted file mounts.
 
-- Outbound network access: Typically, network access is disabled when a server has access to the 
-  filesystem, and vice-versa. Most servers require access to only a single host, port,
-  and protocol. These permissions are explicitly listed and enforced.
-  There are some exceptions, such as the `mcp/git` server.
-
 - Interception of tool requests: Requests to and from tools that contain sensitive
   information such as secrets are blocked.
 
