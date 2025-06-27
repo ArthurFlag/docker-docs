@@ -10,9 +10,7 @@ params:
 The MCP Gateway is Docker's open-source enterprise-ready solution for orchestrating and
 managing [Model Context Protocol (MCP)](https://spec.modelcontextprotocol.io/) servers
 securely across development and production environments.
-It is designed to help organizations connect AI
-agents from the [Docker MCP Catalog](https://hub.docker.com/mcp) to internal infrastructure
-without compromising security, visibility, or control.
+It is designed to help organizations connect MCP servers from the [Docker MCP Catalog](https://hub.docker.com/mcp) to MCP Clients without compromising security, visibility, or control.
 
 By unifying multiple MCP servers into a single, secure endpoint, the MCP Gateway offers
 the following benefits:
@@ -40,19 +38,17 @@ The MCP Gateway solves problems encountered by various groups:
 - Server Management: List, inspect, and call MCP tools, resoures and prompts from multiple servers
 - Container-based Servers: Run MCP servers as Docker containers with proper isolation
 - Secrets Management: Secure handling of API keys and credentials via Docker Desktop
-- OAuth Integration: Built-in OAuth flows for service authentication
 - Server Catalog: Manage and configure multiple MCP catalogs
-- Dynamic Discovery: Automatic tool, prompt, and resource discovery from running servers
+- Dynamic Discovery and Reloading: Automatic tool, prompt, and resource discovery from running servers
 - Monitoring: Built-in logging and call tracing capabilities
 
 ## Install the MCP Gateway
 
 ### Prerequisites
 
-- Docker Desktop is installed.
-- The MCP Toolkit feature is [enabled](/manuals/ai/mcp-catalog-and-toolkit/toolkit.md#enable-docker-mcp-toolkit).
+- [Docker Engine](/manuals/engine/_index.md)
 - Go 1.24+ (for development)
-  
+
 ### Install as Docker CLI Plugin
 
 The MCP CLI is already installed on recent versions of Docker Desktop.
