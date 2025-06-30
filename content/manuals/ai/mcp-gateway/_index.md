@@ -71,7 +71,7 @@ docker mcp --help
 
 ## Use the MCP Gateway
 
-To view all the commands and configuration options, go to the [docker-mcp repository](https://github.com/docker/docker-mcp).
+To view all the commands and configuration options, go to the [mcp-gateway repository](https://github.com/docker/mcp-gateway).
 
 ## Related pages
 
