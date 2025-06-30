@@ -49,19 +49,47 @@ The MCP Gateway solves problems encountered by various groups:
 - [Docker Engine](/manuals/engine/_index.md)
 - Go 1.24+ (for development)
 
-### Install as Docker CLI Plugin
+### Install using a pre-built binary
 
-The MCP CLI is already installed on recent versions of Docker Desktop.
-To update to the latest version:
+> [!IMPORTANT]
+> These instructions are mostly suitable for testing purposes.
+> We otherwise recommend building from the sources. See the [readme](https://github.com/docker/mcp-gateway?tab=readme-ov-file#installation).
 
-```bash
-# Clone the repository
-git clone https://github.com/docker/docker-mcp.git
-cd docker-mcp
+You can download the latest binary from the [GitHub releases page](https://github.com/docker/mcp-gateway/releases/latest).
 
-# Build and install the plugin
-make docker-mcp
-```
+Rename the relevant binary and copy it to the destination matching your OS:
+
+| OS      | Binary name         | Destination folder                  |
+|---------|---------------------|-------------------------------------|
+| Linux   | `docker-mcp`     | `$HOME/.docker/cli-plugins`         |
+| macOS   | `docker-mcp`     | `$HOME/.docker/cli-plugins`         |
+| Windows | `docker-mcp.exe` | `%USERPROFILE%\.docker\cli-plugins` |
+
+Or copy it into one of these folders for installing it system-wide.
+
+
+{{< tabs group="" >}}
+{{< tab name="On Unix environments">}}
+
+
+* `/usr/local/lib/docker/cli-plugins` OR `/usr/local/libexec/docker/cli-plugins`
+* `/usr/lib/docker/cli-plugins` OR `/usr/libexec/docker/cli-plugins`
+
+> [!NOTE]
+> You may have to make the binaries executable with `chmod +x`:
+
+> ```bash
+> $ chmod +x ~/.docker/cli-plugins/docker-mcp
+> ```
+
+{{< /tab >}}
+{{< tab name="On Windows">}}
+
+* `C:\ProgramData\Docker\cli-plugins`
+* `C:\Program Files\Docker\cli-plugins`
+
+{{< /tab >}}
+{{</tabs >}}
 
 You can now use the `mcp` command:
 
